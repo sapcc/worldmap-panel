@@ -42,7 +42,7 @@ export default class WorldMap {
       worldCopyJump: true,
       preferCanvas: true,
       center: mapCenter,
-      zoom: parseInt(this.ctrl.panel.initialZoom, 10) || 1,
+      zoom: parseFloat(this.ctrl.panel.initialZoom, 10) || 1,
     });
     this.setMouseWheelZoom();
 
@@ -250,7 +250,7 @@ export default class WorldMap {
   }
 
   setZoom(zoomFactor) {
-    this.map.setZoom(parseInt(zoomFactor, 10));
+    this.map.setZoom(parseFloat(zoomFactor, 10));
   }
 
   remove() {
